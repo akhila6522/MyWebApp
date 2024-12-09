@@ -14,11 +14,5 @@ pipeligene {
                         sh 'mvn clean package'
                   }
             }
-            stage('Test') {
-                  steps {
-                        // Run tests using Maven
-                        sh 'mvn test'
-                  }
-            }
       }
 }

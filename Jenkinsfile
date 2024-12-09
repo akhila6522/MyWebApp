@@ -8,3 +8,5 @@ pipeline {
                         git branch: 'main', url: 'https://github.com/akhila6522/MyWebApp.git'
                   }
             }
+      }
+}

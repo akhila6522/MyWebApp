@@ -30,7 +30,7 @@ pipeline {
                           sh """
                           curl --upload-file ${WAR_FILE} \
                               --user ${TOMCAT_USER}:${TOMCAT_PASSWORD} \
-                              ${TOMCAT_URL}/deploy?path=${DEPLOY_CONTEXT}&update=true || true
+                              ${TOMCAT_URL}/deploy?path=${DEPLOY_CONTEXT}&update=true
                           """
                         }
                   }

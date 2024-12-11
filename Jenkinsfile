@@ -7,7 +7,7 @@ pipeline {
             TOMCAT_USER='tomcat'
             TOMCAT_PASSWORD='12345'
             WAR_FILE='target/MyWebApp.war'
-            DEPLOY_CONTEXT='MyWebAppDeclarative'
+            DEPLOY_CONTEXT='MyWebApp'
       }
       
       stages {

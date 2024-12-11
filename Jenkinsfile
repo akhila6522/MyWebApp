@@ -5,7 +5,7 @@ pipeline {
       environment {
             TOMCAT_URL='http://localhost:8081/manager/text'
             TOMCAT_USER='tomcat'
-            TOMACT_PASSWORD='12345'
+            TOMCAT_PASSWORD='12345'
             WAR_FILE='target/MyWebApp.war'
             DEPLOY_CONTEXT='MyWebApp'
       }

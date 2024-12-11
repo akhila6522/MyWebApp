@@ -27,11 +27,15 @@ pipeline {
                   steps {
                         script {
                             // Deploy the WAR file to Tomcat
-                    sh """
-                    curl --upload-file ${WAR_FILE} \
-                        --user ${TOMCAT_USER}:${TOMCAT_PASSWORD} \
-                        ${TOMCAT_URL}/deploy?path=${DEPLOY_CONTEXT}&update=true
-                    """
+                          sh """
+                          curl --upload-file ${WAR_FILE} \
+                              --user ${TOMCAT_USER}:${TOMCAT_PASSWORD} \
+                              ${TOMCAT_URL}/deploy?path=${DEPLOY_CONTEXT}&update=true || true
+                          """
+                             sh """
+                              curl -s --user ${TOMCAT_USER}:${TOMCAT_PASSWORD} \
+                              ${TOMCAT_URL}/list
+                              """
                         }
                   }
             }            
